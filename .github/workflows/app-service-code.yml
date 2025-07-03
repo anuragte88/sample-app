@@ -20,12 +20,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: "yarn"
 
-      - name: NPM install and build
-        run: |
-          npm install
-          npm run build
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+  
+      - name: Build the app
+        run: npm run build
 
       - name: Copy static files
         run: |
