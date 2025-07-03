@@ -3,7 +3,7 @@ name: App Service Code
 on:
   push:
     branches:
-      - main
+      - master
   workflow_dispatch:
 
 env:
@@ -22,10 +22,10 @@ jobs:
           node-version: 18
           cache: "yarn"
 
-      - name: yarn install and build
+      - name: NPM install and build
         run: |
-          yarn install --frozen-lockfile
-          yarn build
+          npm install
+          npm run build
 
       - name: Copy static files
         run: |
