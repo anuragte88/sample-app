@@ -10,7 +10,7 @@ To get the app running locally, follow these instructions:
 
 ```shell
 node -v
-npm -v
+npm -V
 ```
 
 2. Clone and/or fork the repo and install npm packages:
